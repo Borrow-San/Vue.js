@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-  <router-view></router-view>
-  <img alt="Vue logo" src="@/assets/logo.png">
-  <InfoMain msg="InfoMain"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import InfoMain from '@/components/InfoMain.vue'
-
 export default {
-  name: 'App',
-  components: {
-    InfoMain
-  }
+  name: 'app'
 }
 </script>
 
