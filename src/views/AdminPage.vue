@@ -1,15 +1,15 @@
 <template>
   <div class="loginPage">
-    <h1>관리자 기본 레이아웃</h1>
+    <h3>adminID 님, 안녕하세요.</h3>
     <table>
+      <tbody>
         <tr>
-            <td>
-                <NavAdminVue/>
-            </td>
-            <td>
-              <router-view/>
-            </td>
+          <NavAdminVue/>
+          <td>
+            <router-view/>
+          </td>
         </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -26,4 +26,19 @@ export default {
 </script>
 
 <style>
+  h3{
+    text-align: left;
+  }
+  table {
+    text-align: left;
+    border-collapse: collapse;
+    border: 0;
+  }
+  td {
+    border: 4px solid #aaa;
+    background-clip: padding-box;
+    width: 80vw;
+    height: 80vw;
+    scroll-snap-align: start;
+  }
 </style>
