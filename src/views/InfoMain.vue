@@ -1,17 +1,13 @@
 <template>
   <div class="infoMain">
-    <NavInfo/>
+    <router-link to="/">Logo</router-link>｜
+        <router-link to="/login">Log in</router-link>
   </div>
 </template>
 
 <script>
-import NavInfo from '@/components/common/NavInfo.vue'
-
 export default {
-  name: 'infoMain',
-  components: {
-    NavInfo
-  }
+  name: 'infoMain'
 }
 </script>
 

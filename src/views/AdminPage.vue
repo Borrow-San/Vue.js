@@ -7,7 +7,7 @@
                 <NavAdminVue/>
             </td>
             <td>
-                <AdminView/>
+              <router-view/>
             </td>
         </tr>
     </table>
@@ -16,13 +16,11 @@
 
 <script>
 import NavAdminVue from '@/components/common/NavAdmin.vue'
-import AdminView from '@/views/AdminView.vue'
 
 export default {
   name: 'loginPage',
   components: {
-    NavAdminVue,
-    AdminView
+    NavAdminVue
   }
 }
 </script>

@@ -3,58 +3,34 @@ import { createRouter, createWebHistory} from 'vue-router'
 import InfoMain from '@/views/InfoMain.vue'
 import LoginPage from '@/views/LoginPage.vue'
 import AdminPage from '@/views/AdminPage.vue'
+import AdminClaims from '@/views/admin/AdminClaims.vue'
+import AdminDemands from '@/views/admin/AdminDemands.vue'
+import AdminMain from '@/views/admin/AdminMain.vue'
+import AdminNotice from '@/views/admin/AdminNotice.vue'
+import AdminRents from '@/views/admin/AdminRents.vue'
+import AdminStands from '@/views/admin/AdminStands.vue'
+import AdminUsers from '@/views/admin/AdminUsers.vue'
 
 const routes = [
     {
         path: '/',
-        name: 'InfoMain',
         component: InfoMain
     },
     {
         path: '/login',
-        name: 'LoginPage',
         component: LoginPage
     },
     {
         path: '/admin',
-        name: 'AdminPage',
         component: AdminPage,
         children: [
-            {
-                path: '',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'users',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'rents',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'claims',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'stands',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'demands',
-                name: '',
-                component: AdminPage
-            },
-            {
-                path: 'notice',
-                name: '',
-                component: AdminPage
-            }
+            { path: '', component: AdminMain },
+            { path: 'users', component: AdminUsers },
+            { path: 'rents', component: AdminRents },
+            { path: 'claims', component: AdminClaims },
+            { path: 'stands', component: AdminStands },
+            { path: 'demands', component: AdminDemands },
+            { path: 'notice', component: AdminNotice }
         ]
     },
 ]
